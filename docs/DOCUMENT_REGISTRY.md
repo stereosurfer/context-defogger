@@ -12,7 +12,7 @@ DOCUMENT_REGISTRY.md is repo-local.
 
 | Document | Role | Canonical for | Read by default | Read when | Owned by lane |
 |---|---|---|---:|---|---|
-| `README.md` | summary | project positioning and public onboarding | yes | all new sessions | skill_governance |
+| `README.md` | summary | bilingual project positioning, public onboarding, and license summary | yes | all new sessions | skill_governance |
 | `AGENTS.md` | canonical | agent operating guide and source-of-truth rule | yes | all agent sessions | repo_governance |
 | `docs/handoff/CURRENT_STATUS.md` | status | compact current repo snapshot and next safe work | yes | all new sessions | repo_governance |
 | current GitHub issue or PR | canonical | active task objective, allowed paths, acceptance, validation, merge state | yes | every work unit | active task lane |
