@@ -25,6 +25,8 @@ DOCUMENT_REGISTRY.md is repo-local.
 | `skills/context-defogger/references/extraction_schema.md` | contract | article embryo and support-note output structure | no | schema/output format changes | skill_governance |
 | `skills/context-defogger/references/test_cases.md` | example | compact behavioral calibration cases | no | validation, regression, style calibration | skill_governance |
 | `skills/context-defogger/agents/openai.yaml` | contract | UI metadata and default prompt | no | skill interface metadata changes | skill_governance |
+| `CLAUDE.md` | summary | Claude Code project memory entrypoint | yes in Claude Code | Claude Code sessions | skill_governance |
+| `.claude/commands/context-defogger.md` | template | Claude Code slash command for Context Defogger | no | Claude Code `/context-defogger` use or command changes | skill_governance |
 
 ## ASGK Governance Documents
 
