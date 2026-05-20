@@ -42,25 +42,31 @@ Tagline:
 >
 > Clear messy AI conversations into usable thinking context.
 
-## 如何使用：Codex / How To Use: Codex
+## 安裝與使用 / Install And Use
 
-Skill 位置：
+選你使用的工具即可。Codex 使用 skill installer；Claude Code 使用專案內的 slash command。
 
-Skill location:
+Choose your tool. Codex uses the skill installer. Claude Code uses a project slash command.
+
+### Codex
+
+在 Codex 裡輸入：
+
+In Codex, type:
 
 ```text
-skills/context-defogger/
+$skill-installer install https://github.com/stereosurfer/context-defogger/tree/main/skills/context-defogger
 ```
 
-在 Codex 裡可以這樣說：
+安裝後，重新啟動 Codex，讓新的 skill metadata 被載入。接著就可以在對話中這樣呼叫：
 
-In Codex, you can say:
+After installing, restart Codex so the new skill metadata is loaded. Then invoke it in conversation:
 
 ```text
 Use $context-defogger to turn this conversation into public thinking-context article embryos.
 ```
 
-或直接貼一段對話，請它整理：
+也可以直接貼一段對話，請它整理：
 
 Or paste a conversation and ask it to process it:
 
@@ -68,29 +74,49 @@ Or paste a conversation and ask it to process it:
 Use $context-defogger on this conversation.
 ```
 
-## 如何使用：Claude Code / How To Use: Claude Code
+### Manual Codex Install
 
-這個 repo 也提供 Claude Code 的輕量入口：
+如果你不用 `$skill-installer`，也可以手動複製 skill folder：
 
-This repo also includes lightweight Claude Code entrypoints:
+If you do not use `$skill-installer`, copy the skill folder manually:
 
-- `CLAUDE.md`：專案記憶入口。
-- `.claude/commands/context-defogger.md`：專案 slash command。
+```text
+mkdir -p ~/.codex/skills
+cp -R skills/context-defogger ~/.codex/skills/context-defogger
+```
 
-- `CLAUDE.md`: project memory entrypoint.
-- `.claude/commands/context-defogger.md`: project slash command.
+### Claude Code
 
-在 Claude Code 裡可以使用：
+把這兩個項目複製到你的目標專案：
 
-In Claude Code, use:
+Copy these two items into your target project:
+
+```text
+skills/context-defogger/
+.claude/commands/context-defogger.md
+```
+
+範例：
+
+Example:
+
+```text
+mkdir -p .claude/commands skills
+cp -R /path/to/context-defogger/skills/context-defogger skills/context-defogger
+cp /path/to/context-defogger/.claude/commands/context-defogger.md .claude/commands/context-defogger.md
+```
+
+然後在 Claude Code 裡使用：
+
+Then use it in Claude Code:
 
 ```text
 /context-defogger
 ```
 
-Claude Code 入口只指向 canonical skill，不複製另一套規則，避免兩邊漂移。
+如果你只是在這個 repo 裡試用，直接打開 Claude Code 並輸入 `/context-defogger` 即可。`CLAUDE.md` 只是讓 Claude Code 讀到專案說明；它不是必要的安裝步驟。
 
-The Claude Code entrypoints point back to the canonical skill instructions instead of duplicating another rule set.
+If you are trying it inside this repo, open Claude Code here and run `/context-defogger`. `CLAUDE.md` only gives Claude Code project instructions; it is not required for installation.
 
 ## 儲存輸出 / Saving Output
 
