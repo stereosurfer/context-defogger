@@ -1,0 +1,35 @@
+task_id: "CTXD-000"
+lane: "skill_governance"
+intelligence_level: "frontier"
+intelligence_level_reason: "Architecture or governance work requires policy judgment."
+durable_source_of_truth: "GitHub issue #000"
+github_issue_status: "available"
+work_unit_kind: "implementation"
+objective: "One concrete Context Defogger repo result."
+product_context: "Why this improves the public skill or its governance."
+current_repository_context: "Known repo files/state."
+files_to_inspect_first:
+  - "AGENTS.md"
+  - "docs/handoff/CURRENT_STATUS.md"
+  - "current GitHub issue or PR"
+  - "specific target file, skill file, or canonical doc"
+allowed_paths:
+  - "skills/context-defogger/"
+expected_changes:
+  - "Specific bounded change."
+expected_output: "Observable output."
+non_goals:
+  - "Do not expand scope."
+constraints:
+  - "No protected paths."
+plan:
+  - "Step 1"
+checklist:
+  - "[ ] Check item"
+acceptance_sheet:
+  - "[ ] Acceptance condition"
+validation_commands:
+  - "python3 scripts/validate_bootstrap.py"
+stop_conditions:
+  - "protected_path_change_required"
+rollback_expectations: "Revert only this task's changes or open follow-up issue."

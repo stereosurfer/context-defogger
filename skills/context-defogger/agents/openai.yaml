@@ -1,0 +1,6 @@
+interface:
+  display_name: "Context Defogger"
+  short_description: "Defog messy AI chats into thinking context"
+  default_prompt: "Use $context-defogger to turn this conversation into public thinking-context article embryos."
+policy:
+  allow_implicit_invocation: true
