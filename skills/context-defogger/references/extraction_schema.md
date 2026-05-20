@@ -13,6 +13,10 @@ overall_theme: ""
 article_count: 0
 series_mode: none | single_milestone_series | separate_articles
 github_anchor_policy: "background_only"
+saved_output:
+  status: not_requested | proposed | saved
+  output_root: ""
+  naming_rule: ""
 open_questions:
   - ""
 ```

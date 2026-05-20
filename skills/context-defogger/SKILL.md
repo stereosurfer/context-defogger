@@ -21,6 +21,40 @@ The primary output should read like a shaped idea, not a section-by-section summ
 
 Do not generate website code, Cloudflare deployment steps, or interactive UI unless the user explicitly switches to the publishing phase.
 
+## Output Persistence
+
+By default, return the article embryo in chat unless the user asks to save it.
+
+When saving output, use this default root:
+
+```text
+~/Documents/Context Defogger/
+```
+
+Before creating this folder, ask the user to confirm the location. If the user
+chooses another folder, use that folder for the current run and mention it in
+the output metadata.
+
+Use this naming convention for a single article:
+
+```text
+YYYY-MM-DD_HHMMSS__source-title__context-defogger.md
+```
+
+Use this naming convention when a source conversation becomes an article series:
+
+```text
+YYYY-MM-DD_HHMMSS__source-title__context-defogger/
+  index.md
+  01__short-article-slug.md
+  02__short-article-slug.md
+```
+
+Keep filenames filesystem-safe: lowercase slugs, ASCII punctuation, no private
+thread ids unless the user explicitly wants them as anchors. Do not save private
+conversation exports, raw JSONL, screenshots, or local artifacts unless the user
+separately asks for an export/archive workflow.
+
 ## Core Rule
 
 Group by thinking tension, not by GitHub object.

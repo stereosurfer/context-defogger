@@ -8,6 +8,10 @@ formats:
   - Markdown
   - YAML
 runtime_required_for_skill: "none"
+agent_entrypoints:
+  codex: "skills/context-defogger/SKILL.md"
+  claude_code_project_memory: "CLAUDE.md"
+  claude_code_project_command: ".claude/commands/context-defogger.md"
 validation:
   - "python3 scripts/asgk.py target-install-check --repo-root ."
   - "python3 scripts/asgk.py doctor (source-repo validator; may report target-repo non-applicable source fixture gaps)"

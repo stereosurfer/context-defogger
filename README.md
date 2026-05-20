@@ -12,6 +12,25 @@ It is not a chat transcript exporter, a project handoff writer, or a static blog
 - AI-proposal calibration: what the AI proposed, what the user modified or rejected, and why.
 - Support notes with trigger lines, AI assumptions, and retained design choices.
 
+## Saving Output
+
+By default, Context Defogger answers in chat.
+
+If you ask it to save the result, the default location is:
+
+```text
+~/Documents/Context Defogger/
+```
+
+It should ask before creating that folder. Single-article output uses:
+
+```text
+YYYY-MM-DD_HHMMSS__source-title__context-defogger.md
+```
+
+If one conversation becomes a series, it saves a folder with `index.md` and one
+Markdown file per article.
+
 ## Why This Exists
 
 AI conversations often contain useful reasoning, but the useful part is buried inside back-and-forth correction. Context Defogger helps turn that fog into reusable public thinking notes.
@@ -31,6 +50,22 @@ Use it with:
 ```text
 Use $context-defogger to turn this conversation into public thinking-context article embryos.
 ```
+
+## Claude Code Usage
+
+This repository also includes lightweight Claude Code entrypoints:
+
+- `CLAUDE.md` as project memory.
+- `.claude/commands/context-defogger.md` as a project slash command.
+
+In Claude Code, use:
+
+```text
+/context-defogger
+```
+
+The Claude command points back to the canonical skill instructions instead of
+duplicating them.
 
 ## Repository Governance
 
